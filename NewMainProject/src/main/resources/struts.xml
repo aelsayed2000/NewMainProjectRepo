@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+		
+    <!-- Mapping for "hello" action -->
+    <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+        <result name="success">/helloWorld.jsp</result>
+    </action>
+        <action name="hello2" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+        <result name="success">/helloWorldTwo.jsp</result>
+    </action>
+        <action name="hello3" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+        <result name="success">/helloWorldThree.jsp</result>
+    </action>
+    </package>
+</struts>
